@@ -18,5 +18,3 @@ const nested = {
 Object.freeze(nested);
 Object.freeze(obj)
 Object.freeze(arr)
-nested.obj.update = 5
-console.log(nested)
