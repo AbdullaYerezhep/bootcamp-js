@@ -1,3 +1,10 @@
+
+const person = {
+    name: 'Rick',
+    age: 77,
+    country: 'US',
+}
+  
 person.age++
 person.country = "FR"
 
