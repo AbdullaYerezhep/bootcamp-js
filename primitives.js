@@ -1,4 +1,4 @@
-let str = 'string'
-let num = 2
-let bool = true
-let undef
+const str = 'string'
+const num = 2
+const bool = true
+const undef = undefined
