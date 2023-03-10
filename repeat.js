@@ -1,6 +1,6 @@
-const repeat = (n, s) => {
+const repeat = (s, n) => {
     let count = 0
-    let result = ""
+    let result = ''
     while ( count < n) {result = result + s; count++}
     return result
 }
