@@ -1,4 +1,6 @@
 const repeat = (n, s) => {
     let count = 0
-    while ( count < n) {console.log(s); count++}
+    let result = ""
+    while ( count < n) {result = result + s; count++}
+    return result
 }
