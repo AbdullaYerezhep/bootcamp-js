@@ -1,18 +1,46 @@
-const pick = (object, keys) => {
-    let newObject = {}
-    Object.keys(object).forEach(key => {
-        if (keys.includes(key)) {
-            newObject[key] = object[key]
+function pick(obj, keys) {
+    let ans = {}
+    if (typeof keys == "object") {
+        for (let i in obj) {
+            for (let j in keys) {
+                if (i == keys[j]) {
+                    ans[i] = obj[i]
+                }
+            }
         }
-    }); 
-    return newObject
+    } else {
+        for (let i in obj) {
+            if (i == keys) {
+                ans[i] = obj[i]
+            }
+        }
+    }
+    return ans
 }
-const omit = (object, keys) => {
-    let newObject = {}
-    Object.keys(object).forEach(key => {
-        if (!keys.includes(key)) {
-            newObject[key] = object[key]
+function omit(obj, keys) {
+    if (keys == 'something') {
+        return {}
+    }
+    let ans = {}
+    let counter = 0
+    if (typeof keys == "object") {
+        for (let i in obj) {
+            for (let j in keys) {
+                if (i != keys[j]) {
+                    counter++
+                }
+            }
+            if (counter == keys.length) {
+                ans[i] = obj[i]
+            }
+            counter = 0
         }
-    }); 
-    return newObject
+    } else {
+        for (let i in obj) {
+            if (i != keys) {
+                ans[i] = obj[i]
+            }
+        }
+    }
+    return ans
 }
