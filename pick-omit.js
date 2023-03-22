@@ -1,5 +1,5 @@
 const pick = (object, keys) => {
-    newObject = {}
+    let newObject = {}
     Object.keys(object).forEach(key => {
         if (keys.includes(key)) {
             newObject[key] = object[key]
@@ -8,7 +8,7 @@ const pick = (object, keys) => {
     return newObject
 }
 const omit = (object, keys) => {
-    newObject = {}
+    let newObject = {}
     Object.keys(object).forEach(key => {
         if (!keys.includes(key)) {
             newObject[key] = object[key]
