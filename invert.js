@@ -1,4 +1,4 @@
-const revert = (o) => {
+const invert = (o) => {
     let newO = {}
     for (key in o) {
         newO[o[key]] = key
